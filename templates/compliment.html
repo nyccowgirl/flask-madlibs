@@ -4,9 +4,10 @@
   <title>A Compliment</title>
 </head>
 <body>
-    Hi {{ person1 }}! I think you're {{ compliment }}!<br><br>
+    Hi {{ person1 }}! I think you're {% if compliments %}{% for compliment in compliments %}{{ "and " if loop.last}}{{ compliment }}{{ ", " if not loop.last}}{% endfor %}{% endif %}.
+    <br><br>
     <form action="/game">
-        Would you like to play a game? 
+        Would you like to play a game?
         <input type="radio" name="game" value="yes"><br>
         <input type="submit">
     </form>

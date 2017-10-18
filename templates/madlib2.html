@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <p>
+            <span>{{ person }}</span> was a very <span>{{ adjective|join(', ') }}</span> child. Because of that, <span>{{ person }}</span> was sent to <span>{{ location }}</span> and turned into a <span>{{ color }} {{ noun }}</span>.
+        </p>
+{% endblock %}

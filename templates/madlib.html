@@ -1,11 +1,7 @@
-<!doctype html>
-<html>
-    <head>
+{% extends "base.html" %}
 
-    </head>
-    <body>
+{% block content %}
         <p>
-            There once was a {{ color }} {{ noun }} sitting in {{ location }}. When {{ person }} went to pick it up, it burst into flames in a totally {{ adjective|join(', ') }} way.
+            There once was a <span>{{ color }} {{ noun }}</span> sitting in <span>{{ location }}</span>. When <span>{{ person }}</span> went to pick it up, it burst into flames in a totally <span>{{ adjective|join(', ') }}</span> way.
         </p>
-    </body>
-</html>
+{% endblock %}
